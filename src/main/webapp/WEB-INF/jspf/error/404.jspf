@@ -1,0 +1,8 @@
+<%--
+ * author: Glib
+--%>
+
+
+<p class="error">
+    <fmt:message key="notFound"/>
+</p>
