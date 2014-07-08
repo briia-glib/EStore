@@ -62,7 +62,7 @@
                              render toggle according to browser's preferred locale --%>
                         <c:when test="${empty sessionScope['javax.servlet.jsp.jstl.fmt.locale.session']}">
                           <c:choose>
-                            <c:when test="${pageContext.request.locale.language ne 'cs'}">
+                            <c:when test="${pageContext.request.locale.language ne 'ua'}">
                               english
                             </c:when>
                             <c:otherwise>
@@ -74,14 +74,14 @@
                           </c:choose> |
 
                           <c:choose>
-                            <c:when test="${pageContext.request.locale.language eq 'cs'}">
-                              česky
+                            <c:when test="${pageContext.request.locale.language eq 'ua'}">
+                              українська
                             </c:when>
                             <c:otherwise>
                               <c:url var="url" value="chooseLanguage">
-                                <c:param name="language" value="cs"/>
+                                <c:param name="language" value="ua"/>
                               </c:url>
-                              <div class="bubble"><a href="${url}">česky</a></div>
+                              <div class="bubble"><a href="${url}">українська</a></div>
                             </c:otherwise>
                           </c:choose>
                         </c:when>
@@ -89,7 +89,7 @@
                       <%-- Otherwise, render widget according to the set locale --%>
                         <c:otherwise>
                           <c:choose>
-                            <c:when test="${sessionScope['javax.servlet.jsp.jstl.fmt.locale.session'] ne 'cs'}">
+                            <c:when test="${sessionScope['javax.servlet.jsp.jstl.fmt.locale.session'] ne 'ua'}">
                               english
                             </c:when>
                             <c:otherwise>
@@ -101,14 +101,14 @@
                           </c:choose> |
 
                           <c:choose>
-                            <c:when test="${sessionScope['javax.servlet.jsp.jstl.fmt.locale.session'] eq 'cs'}">
-                              česky
+                            <c:when test="${sessionScope['javax.servlet.jsp.jstl.fmt.locale.session'] eq 'ua'}">
+                              українська
                             </c:when>
                             <c:otherwise>
                               <c:url var="url" value="chooseLanguage">
-                                <c:param name="language" value="cs"/>
+                                <c:param name="language" value="ua"/>
                               </c:url>
-                              <div class="bubble"><a href="${url}">česky</a></div>
+                              <div class="bubble"><a href="${url}">українська</a></div>
                             </c:otherwise>
                           </c:choose>
                         </c:otherwise>
